@@ -1,0 +1,286 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Poppins&family=Roboto+Mono:wght@500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, #000000 100%),
+    url("portfolio3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.navigation {
+  display: flex;
+  padding: 1.5%;
+  background: linear-gradient(rgba(0, 0, 0, 0.903), rgba(1, 1, 1, 0.5));
+}
+.container {
+  width: 55%;
+  margin-left: auto;
+}
+.nav-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  justify-content: space-around;
+}
+.navlink {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 200;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+.hamburger {
+  display: none;
+  margin-left: auto;
+}
+
+@media (max-width: 980px) {
+  .hamburger {
+    display: block;
+    margin-right: 5%;
+    z-index: 10;
+    cursor: pointer;
+  }
+  .navigation {
+    position: relative;
+  }
+  .nav-list {
+    flex-direction: column;
+    margin: 0 auto;
+    height: 60%;
+  }
+  .container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.7s linear;
+    transform: translateX(100%);
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.903), rgba(1, 1, 1, 0.7));
+
+    align-items: center;
+    list-style: none;
+  }
+
+  .showNavigation {
+    transform: translateX(0);
+    transition: all 0.7s linear;
+  }
+
+.horiz{
+  margin-bottom:60vh;
+}
+.heading{
+  font-size:3vh;
+}
+
+}
+
+.foldingpages {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+.panel {
+  width: 9vw;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border: 2px solid white;
+  border-radius: 20px;
+  transition: all 0.7s ease-in;
+}
+.active {
+  width: 60vw;
+  margin-left:5%;
+  margin-right:5%;
+  box-shadow: 6px 6px rgb(169, 157, 157);
+  padding-top:6%;
+  font-size: 4vh;
+  transition: all 0.7s ease-in;
+}
+.heading {
+  transform: rotate(-90deg);
+  font-size: 30px;
+  height: auto;
+  width: auto;
+margin-left:5%;
+font-size:4vh;
+
+
+
+}
+.vert {
+  font-size:6vh;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+
+
+
+@keyframes vertical {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(18deg);
+  }
+  40% {
+    transform: rotate(36deg);
+  }
+  60% {
+    transform: rotate(54deg);
+  }
+  80% {
+    transform: rotate(72deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+.horiz{
+  animation-name: horizontal;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes horizontal{
+  0% {
+    transform: rotate(90deg);
+  }
+  20% {
+    transform: rotate(72deg);
+  }
+  40% {
+    transform: rotate(54deg);
+  }
+  60% {
+    transform: rotate(36deg);
+  }
+  80% {
+    transform: rotate(18deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.content{
+padding-left:10%;
+  display:none;
+ 
+}
+.show-content{
+  animation-name:displayy;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  display: block;
+}
+
+@keyframes displayy {
+0%{
+opacity: 0;
+}
+33%{
+  opacity:0;
+}
+90%{
+opacity: 1;
+
+}
+100%{
+opacity: 1;
+  }
+
+}
+.not-active{
+  width:9vw;
+font-size:7vh;
+
+}
+.div-not-active{
+
+  height:70%;
+
+
+}
+.about {
+  color: white;
+  height: auto;
+  margin-left:7%;
+}
+.info {
+  align-items: center;
+
+  font-size:3rem;
+}
+.feature{
+  color:white;
+  font-size: 3rem;
+}
+.hey {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+}
+.cursor{
+  height:50px;
+  width:2px;
+  background-color: white;
+  animation-name:blink ;
+  animation-duration: 0.4s;
+  animation-iteration-count: infinite;
+}
+@keyframes blink {
+  0%{
+      opacity:1;
+  }
+  33%{
+      opacity:1;
+  }
+  66%{
+      opacity: 0;
+  }
+  100%{
+      opacity:0;
+  }
+}
+marquee{
+  flex-basis:70%;
+}
+.footer{
+  display: flex;
+  width: 100%;
+  height:6vh;
+  justify-content: space-around;
+  align-items: center;
+  background-color:rgb(145, 147, 152);
+
+}
+.heading2{
+  color: white;
+  font-size:5vh;
+  text-align: center;
+}
